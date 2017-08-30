@@ -21,9 +21,17 @@ function fill(percent){
       }
 }
 function drive(hours){
-      milesDriven += (hours*averageMPG);
-      fuel -= (engineEfficiency()*hours);
-      
+
+      let fuelburned = (engineEfficiency()*hours)
+      if(fuelburned <= fuel){
+            milesDriven += (hours*averageMPG);
+            fuel -= (engineEfficiency()*hours);
+      }
+      else{
+            milesDriven = fuel*averageMPG;
+            fuel = 0;
+
+      }
       }
 }
 
