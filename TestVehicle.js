@@ -2,7 +2,9 @@ const Vehicle = require('./Vehicle.js');
 
 function main(){
     //make two vehicles and take them for a spin.
-   let jackcar = new Vehicle(6,1,1,24,0); 
+   let jackcar = new Vehicle(6,14,14,24,0);
+   jackcar.drive(10);
+   console.log(jackcar.totalMiles());
 
 
 
